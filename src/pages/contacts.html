@@ -1,0 +1,91 @@
+<extends src="base.html">
+    <block name="main">
+        <h1>Контакты</h1>
+        <div class="contacts aligner">
+            <div>
+                <div> 
+                    <img src="https://botlist.imgix.net/1301/c/pewdiepie-medium.jpg?auto=compress" class="contacts__photo">
+                </div>
+                <div class="contacts__contact">
+                    <h2>Какой-то странный мужик, ютубер</h2>
+                    <p>
+                        Телефон: <a href="#">eshkere3</a>
+                    </p>
+                    <p>
+                        E-mail: <a href="#">sample@example.com</a>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <hr>
+            <div>
+                <div> 
+                    <img src="https://botlist.imgix.net/1301/c/pewdiepie-medium.jpg?auto=compress" class="contacts__photo">
+                </div>
+                <div class="contacts__contact">
+                    <h2>Какой-то странный мужик, ютубер</h2>
+                    <p>
+                        Телефон: <a href="#">eshkere3</a>
+                    </p>
+                    <p>
+                        E-mail: <a href="#">sample@example.com</a>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <hr>
+            <div>
+                <div> 
+                    <img src="https://botlist.imgix.net/1301/c/pewdiepie-medium.jpg?auto=compress" class="contacts__photo">
+                </div>
+                <div class="contacts__contact">
+                    <h2>Какой-то странный мужик, ютубер</h2>
+                    <p>
+                        Телефон: <a href="#">eshkere3</a>
+                    </p>
+                    <p>
+                        E-mail: <a href="#">sample@example.com</a>
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </block>
+    <block name="css">
+        <style>
+        .contacts > div{
+            width: 1000px;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        .contacts > div > div{
+            float:left;
+        }
+        .contacts__photo{
+            width: 200px;
+            max-width: 200px;
+        }
+        .contacts__contact{
+            margin-left: 20px;
+            width: 780px;
+            max-width: 100%;
+            margin-top: 5px;
+        }
+        .contacts__contact > h2{
+            font-family: 'Ubuntu';
+            font-size: 28px;
+            word-wrap: break-word;
+        }
+        .contacts__contact > p{
+            font-family: 'Ubuntu';
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px !important;
+        }
+        .contacts hr{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        </style>
+    </block>
+</extends>

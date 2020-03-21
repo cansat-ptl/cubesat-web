@@ -3,6 +3,6 @@ run: stop build
 stop: 
 	docker stop spce
 	docker rm spce
-build: run
+build: 
 	docker build -t spce .
 

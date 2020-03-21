@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dabaan</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link inline="inline "rel="stylesheet" type="text/css" href="../css/style.css"  />
+    <block name="css"></block>
+</head>
+<body>
+    <div class="header">
+        <div class="aligner header__aligner">
+            <div class="header__title">
+                <h1>
+                    Dabaan
+                </h1>
+                <p>
+                    Служба доставки легких грузов 
+                </p>
+            </div>
+            <div class="header__contacts">
+                <div>
+                    <div class="header__contacts__logo">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="header__contacts__text">
+                       <h1>
+                        Позвоните нам:
+                       </h1>
+                       <p>
+                        +79241638873
+                       </p>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <div class="header__contacts__logo">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="header__contacts__text">
+                       <h1>
+                        Где мы находимся:
+                       </h1>
+                       <a href="#">
+                        Ул. петра алексеева 49
+                       </a>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <div class="header__contacts__logo">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="header__contacts__text">
+                       <h1>
+                        Время открытия:
+                       </h1>
+                       <a href="#">
+                        14:00
+                       </a>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+                <div class="header__contacts__blockquote">
+                    <a href="#" class="header__contacts__quote">
+                        Напишите нам
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <!-- Mobile button -->
+            <i class="fas fa-bars" id="m-button"></i>
+            <div class="clear"></div>
+
+            <!-- Mobile menu -->
+            <div class="header__mobile__menu" id="m-menu">
+                <div>
+                    <div class="header__contacts__logo">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="header__contacts__text">
+                        <h1>
+                            Позвоните нам
+                        </h1>
+                        <a href="#">
+                            +79241638873    
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <div class="header__contacts__logo">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="header__contacts__text">
+                        <h1>
+                            Где мы находимся:
+                        </h1>
+                        <a href="#">
+                            Ул. петра алексеева 49
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div>
+                    <div class="header__contacts__logo">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="header__contacts__text">
+                        <h1>
+                            Время открытия
+                        </h1>
+                        <p href="#">
+                            14:00
+                        </p>
+                    </div>
+                <div class="clear"></div>
+                </div>
+                <div class="header__contacts__blockquote">
+                    <a href="#" class="header__contacts__quote">
+                        Напишите нам
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="nav aligner">
+        <a href="index.html">
+            Главная
+        </a>
+        <a href="contacts.html">
+            Контакты
+        </a>
+        <a href="news.html">
+            Новости
+        </a>
+        <a href="documents.html">
+            Документы
+        </a>
+        <div class="clear"></div>
+    </div>
+    <block name="main"></block>
+    <h1 class="location">Месторасположение</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2552407.520530376!2d-107.38538938387141!3d42.01743370410657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875ee23448e12e69%3A0x26b02279d27d382f!2z0JLQsNC50L7QvNC40L3Qsywg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1547888612613" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="footer">
+        <div class="aligner">
+            Copyright &copy; 2019 Dabaan
+        </div>
+    </div>
+</body>
+<block name="js"></block>
+<script>
+    // Mobile js
+
+    var mobileButton = document.getElementById("m-button");
+    var mobileMenu = document.getElementById("m-menu");
+    var state = 0;
+    mobileButton.onclick = function () {
+        var contentHeight = mobileMenu.scrollHeight;
+        if (!state) {
+            state = 1;
+            mobileMenu.style.height = contentHeight  + "px";
+        }
+        else {
+            mobileMenu.style.overflow = "hidden";
+            state = 0;
+            mobileMenu.style.height = "0";
+        }
+    }
+</script>
+</html>

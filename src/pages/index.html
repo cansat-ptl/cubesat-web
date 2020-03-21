@@ -1,0 +1,34 @@
+<extends src="base.html">
+    <block name="main">
+        <div class="wrapper">
+            <div class="main__text">
+                <h1>Logistic natural dispatched</h1>
+                <p>
+                    Logistic natural dispatched
+                </p>
+                <a href="about.html">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </block>
+    <block name="js">
+        <script>
+            var maxlocation = 1280 / 1920 * window.innerWidth;
+            console.log(maxlocation / 2);
+            function parallax() {
+                var $slider = document.querySelector(".main");
+                var yPos = window.pageYOffset / 2;
+                yPos = -yPos;
+                console.log(yPos,  maxlocation - (window.innerHeight * 0.75 + 15));
+                if(yPos * -1 < maxlocation - (window.innerHeight * 0.75 + 15)){
+                    var coords = "0% "+ yPos + "px";
+                    $slider.style.backgroundPosition = coords;
+                }
+            }
+            window.addEventListener("scroll", function() {
+                parallax();	
+            });
+        </script>
+    </block>
+</extends>

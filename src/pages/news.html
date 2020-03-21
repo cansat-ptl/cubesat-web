@@ -1,0 +1,27 @@
+<extends src="base.html">
+    <block name="main">
+        <h1>Новости</h1>
+        <div class="aligner">
+            <div>
+                <a class="twitter-timeline" href="https://twitter.com/bbcworld" data-tweet-limit="1" data-height="500px"></a>
+            </div>
+            <div>
+                <a class="twitter-timeline" href="https://twitter.com/thesun" data-tweet-limit="1" data-height="500px"></a> 
+            </div>
+            <div>
+                <a class="twitter-timeline" href="https://twitter.com/nytimes" data-tweet-limit="1" data-height="500px"></a>
+            </div>
+            <div>
+                <a class="twitter-timeline" href="https://twitter.com/usatoday" data-tweet-limit="1" data-height="500px"></a>
+            </div>
+            <div>
+                <a class="twitter-timeline" href="https://twitter.com/wsj" data-tweet-limit="1" data-height="500px"></a>
+            </div>
+            <div>
+                <a class="twitter-timeline" href="https://twitter.com/forbesrussia" data-tweet-limit="1" data-height="500px"></a>
+            </div>
+        </div>
+    </block>
+<block name="js">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</block>
