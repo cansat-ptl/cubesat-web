@@ -106,7 +106,6 @@ body{
     
 }
 /* Nav */
-
 .nav{
     max-width: 100%;
     background: #000;
@@ -130,58 +129,6 @@ body{
 }
 .nav > a:hover{
     background: #a91606;
-}
-/* Main */
-.main{
-    background: url('../images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 75vh;
-}
-.wrapper{
-    overflow: auto;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5)
-}
-.main__text{
-    padding: 1vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    width: 600px;
-    margin: 0 auto;
-    margin-top: 20vh;
-    border: solid 7px #fff;
-    text-align: center;
-}
-.main__text >h1{
-    color: #fff;
-    font-family: Helvetica;
-    font-size: 4vh;
-    text-transform: uppercase;
-}
-.main__text >p{
-    font-size: 2.2vh;
-    font-family: 'Ubuntu', sans-serif;
-    margin-top: 20px;
-    color: #fff;
-}
-.main__text >a{
-    color: #fff;
-    font-size: 1.8vh;
-    font-family: 'Ubuntu', sans-serif;
-    text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
-    font-weight: 500;
-    padding: 10px;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    background: #a91606;
-    transition: 0.5s;
-}
-.main__text >a:hover{
-    box-shadow: 1px 3px 10px -1px #000;
 }
 .location{
     text-align:center;

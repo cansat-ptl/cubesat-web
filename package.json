@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/index.html",
   "scripts": {
-    "serve": "rm -rf dist && parcel ./src/pages/index.html",
+    "serve": "rm -rf dist && NODE_ENV=production parcel ./src/pages/index.html",
     "build": "rm -rf dist && parcel build ./src/pages/index.html --no-source-maps && rm -rf dist/*.css",
     "production": "NODE_ENV=production npm run build"
   },
@@ -24,6 +24,8 @@
   "devDependencies": {
     "parcel-plugin-inline-source": "^1.0.0",
     "posthtml-extend": "^0.3.0",
-    "posthtml-include": "^1.4.0"
+    "posthtml-include": "^1.4.0",
+    "minimist": ">=1.2.2",
+    "acorn": ">=6.4.1"
   }
 }

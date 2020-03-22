@@ -1,37 +1,53 @@
 <extends src="base.html">
     <block name="main">
-        <h1>Документы</h1>
-        <div class="aligner documents">
-            <div class="documents__document">
-                <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
-                <div>
-                    <p>Сертификат о проведении работ 123</p>
+        <div class="main">
+            <h1>Документы</h1>
+            <div class="aligner documents">
+                <div class="documents__document">
+                    <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
+                    <div>
+                        <p>Сертификат о проведении работ 123</p>
+                    </div>
                 </div>
-            </div>
-            <div class="documents__document">
-                <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
-                <div>
-                    <p>Сертификат о проведении работ 123</p>
+                <div class="documents__document">
+                    <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
+                    <div>
+                        <p>Сертификат о проведении работ 123</p>
+                    </div>
                 </div>
-            </div>
-            <div class="documents__document">
-                <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
-                <div>
-                    <p>Сертификат о проведении работ 123</p>
+                <div class="documents__document">
+                    <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
+                    <div>
+                        <p>Сертификат о проведении работ 123</p>
+                    </div>
                 </div>
-            </div>
-            <div class="documents__document">
-                <a href="#">
-                <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
-                </a>
-                <div>
-                    <p>Сертификат о проведении работ 123</p>
+                <div class="documents__document">
+                    <a href="#">
+                    <img src="http://farm6.staticflickr.com/5066/5612317889_9fe170f33f.jpg" width="200px" height="300px">
+                    </a>
+                    <div>
+                        <p>Сертификат о проведении работ 123</p>
+                    </div>
                 </div>
             </div>
         </div>
     </block>
     <block name="css">
         <style>
+        .main{
+            margin-top: 40px;
+        }
+        .main > .aligner > .clear{
+            height: 0 !important;
+            width: 0 !important;
+        }
+        .main > h1{
+            text-align:center;
+            font-size: 24px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
         .documents{
             text-align: center;
         }
