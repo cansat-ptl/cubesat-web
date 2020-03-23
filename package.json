@@ -5,7 +5,7 @@
   "main": "./src/index.html",
   "scripts": {
     "serve": "rm -rf dist && NODE_ENV=production parcel ./src/pages/index.html",
-    "build": "rm -rf dist && parcel build ./src/pages/index.html --no-source-maps && rm -rf dist/*.css",
+    "build": "rm -rf dist && parcel build ./src/pages/* --no-source-maps",
     "production": "NODE_ENV=production npm run build"
   },
   "repository": {
