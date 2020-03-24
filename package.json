@@ -19,13 +19,15 @@
   },
   "homepage": "https://github.com/cansat-ptl/cubesat-web#readme",
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "gulp": "^4.0.2",
+    "gulp-inline-source": "^4.0.0",
+    "posthtml-extend": "^0.3.0",
+    "posthtml-include": "^1.4.0"
   },
   "devDependencies": {
-    "parcel-plugin-inline-source": "^1.0.0",
-    "posthtml-extend": "^0.3.0",
-    "posthtml-include": "^1.4.0",
-    "minimist": ">=1.2.2",
-    "acorn": ">=6.4.1"
+    "acorn": ">=6.4.1",
+    "gulp-posthtml": "^3.0.4",
+    "minimist": ">=1.2.2"
   }
 }

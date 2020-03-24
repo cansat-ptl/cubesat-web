@@ -18,7 +18,7 @@
         <style>
         /* Main */
         .main{
-            background: url('/../images/background.jpg');
+            background: url('./images/background.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             height: 75vh;
@@ -73,12 +73,10 @@
     <block name="js">
         <script>
             var maxlocation = 1280 / 1920 * window.innerWidth;
-            console.log(maxlocation / 2);
             function parallax() {
                 var $slider = document.querySelector(".main");
                 var yPos = window.pageYOffset / 2;
                 yPos = -yPos;
-                console.log(yPos,  maxlocation - (window.innerHeight * 0.75 + 15));
                 if(yPos * -1 < maxlocation - (window.innerHeight * 0.75 + 15)){
                     var coords = "0% "+ yPos + "px";
                     $slider.style.backgroundPosition = coords;

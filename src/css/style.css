@@ -1,3 +1,5 @@
+@import '~/@fortawesome/font-awesome-free';
+
 body,html,p, h1{
     margin: 0;
     color: #000;
