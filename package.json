@@ -2,7 +2,7 @@
   "name": "space",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.html",
+  "main": "./src/pages/index.html",
   "scripts": {
     "serve": "gulp serve",
     "build": "gulp",
