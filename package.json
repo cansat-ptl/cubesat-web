@@ -4,9 +4,9 @@
   "description": "",
   "main": "./src/index.html",
   "scripts": {
-    "serve": "rm -rf dist && NODE_ENV=production parcel ./src/pages/index.html",
-    "build": "rm -rf dist && parcel build ./src/pages/* --no-source-maps",
-    "production": "NODE_ENV=production npm run build"
+    "serve": "gulp serve",
+    "build": "gulp",
+    "production": "env NODE_ENV=production gulp"
   },
   "repository": {
     "type": "git",
@@ -21,13 +21,20 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-inline-source": "^4.0.0",
+    "gulp-sass": "^4.0.2",
     "posthtml-extend": "^0.3.0",
-    "posthtml-include": "^1.4.0"
+    "posthtml-include": "^1.4.0",
+    "uglify-js": "^3.8.0"
   },
   "devDependencies": {
     "acorn": ">=6.4.1",
+    "clean-css": "^4.2.3",
+    "del": "^5.1.0",
     "gulp-posthtml": "^3.0.4",
+    "gulp-serve": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
     "minimist": ">=1.2.2"
   }
 }
