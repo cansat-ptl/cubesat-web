@@ -4,7 +4,7 @@ let gulp = require('gulp');
     sass = require('gulp-sass');
     del = require('del');
     htmlmin = require('gulp-htmlmin');
-    serve = require('gulp-serve');
+    connect = require('gulp-connect');
 
 let minify_config = {
   collapseWhitespace: true,
@@ -52,8 +52,12 @@ gulp.task('clean', () => {
 
 gulp.task('default', gulp.series('sass', 'js', 'icons', 'img', 'html', 'minimize', 'clean'));
 
-gulp.task('server', serve({
-  root: 'dist',
-  port: 8080
-}));
-gulp.task('serve', gulp.series('default', 'server'));
+
+gulp.task('serve', async function() {
+  connect.server({
+    root: './dist',
+    port: 8080,
+    livereload: true
+  });
+  gulp.watch('./src/*.html', gulp.series('default'));
+});
