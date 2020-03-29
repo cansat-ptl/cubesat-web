@@ -22,12 +22,13 @@ gulp.task("sass", () => {
     .pipe(gulp.dest("dist/css"));
 });
 
-gulp.task("js", () => {
-  webpackStream(webpack_conf,webpack).pipe(gulp.dest('./dist/js'));
-
-  return gulp.src('./src/js/widgets.js')
-    .pipe(gulp.dest('dist/js'));
+gulp.task("webpack", () => {
+  return webpackStream(webpack_conf,webpack).pipe(gulp.dest('./dist/js'));
 });
+gulp.task("copy_js", () => {
+    return gulp.src('./src/js/widgets.js')
+    .pipe(gulp.dest('dist/js'));
+})
 
 gulp.task("icons", () => {
   return gulp
@@ -60,7 +61,7 @@ gulp.task("clean", () => {
 
 gulp.task(
   "default",
-  gulp.series("sass", "js", "icons", "img", "html", "minimize", "clean")
+  gulp.series("sass", "webpack", "copy_js", "icons", "img", "html", "minimize", "clean")
 );
 
 gulp.task("serve", async function() {
