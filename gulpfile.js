@@ -1,10 +1,13 @@
-let gulp = require("gulp");
+const gulp = require("gulp");
 posthtml = require("gulp-posthtml");
 inline = require("gulp-inline-source");
 sass = require("gulp-sass");
 del = require("del");
 htmlmin = require("gulp-htmlmin");
 connect = require("gulp-connect");
+webpack = require('webpack');
+webpackStream = require("webpack-stream");
+webpack_conf = require('./webpack.config.js');
 
 let minify_config = {
   collapseWhitespace: true,
@@ -20,7 +23,10 @@ gulp.task("sass", () => {
 });
 
 gulp.task("js", () => {
-  return gulp.src("src/js/*.js").pipe(gulp.dest("dist/js"));
+  webpackStream(webpack_conf,webpack).pipe(gulp.dest('./dist/js'));
+
+  return gulp.src('./src/js/widgets.js')
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task("icons", () => {
