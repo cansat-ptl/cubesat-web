@@ -30,10 +30,16 @@ gulp.task("copy_js", () => {
     .pipe(gulp.dest('dist/js'));
 })
 
-gulp.task("icons", () => {
+gulp.task("fa_icons", () => {
   return gulp
     .src("node_modules/@fortawesome/fontawesome-free/webfonts/*")
     .pipe(gulp.dest("dist/webfonts/"));
+});
+
+gulp.task("leaflet_img", () => {
+  return gulp
+    .src("node_modules/leaflet/dist/images/*")
+    .pipe(gulp.dest("dist/images/"));
 });
 
 gulp.task("img", () => {
@@ -61,7 +67,7 @@ gulp.task("clean", () => {
 
 gulp.task(
   "default",
-  gulp.series("sass", "webpack", "copy_js", "icons", "img", "html", "minimize", "clean")
+  gulp.series("sass", "webpack", "copy_js", "fa_icons", "leaflet_img", "img", "html", "minimize", "clean")
 );
 
 gulp.task("serve", async function() {

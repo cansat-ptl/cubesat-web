@@ -2,6 +2,7 @@ $fa-font-path: "webfonts";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../../node_modules/leaflet/dist/leaflet";
 
 body,
 html,
@@ -143,6 +144,10 @@ body {
   font-family: "Ubuntu", sans-serif;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+#map{
+  width: 100%;
+  height: 400px;
 }
 .footer {
   margin-top: 100px;
