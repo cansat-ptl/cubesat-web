@@ -41,6 +41,11 @@ gulp.task("leaflet_img", () => {
     .src("node_modules/leaflet/dist/images/*")
     .pipe(gulp.dest("dist/images/"));
 });
+gulp.task("leaflet_fullscreen", () => {
+  return gulp
+    .src("node_modules/leaflet-fullscreen/dist/*.png")
+    .pipe(gulp.dest("dist"));
+});
 
 gulp.task("img", () => {
   return gulp.src("src/images/*").pipe(gulp.dest("dist/images"));
@@ -67,7 +72,7 @@ gulp.task("clean", () => {
 
 gulp.task(
   "default",
-  gulp.series("sass", "webpack", "copy_js", "fa_icons", "leaflet_img", "img", "html", "minimize", "clean")
+  gulp.series("sass", "webpack", "copy_js", "fa_icons", "leaflet_img", "leaflet_fullscreen", "img", "html", "minimize", "clean")
 );
 
 gulp.task("serve", async function() {

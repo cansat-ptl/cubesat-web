@@ -1,9 +1,43 @@
 import leaflet from 'leaflet';
-let map = leaflet.map('map', {
-    center: [51.505, -0.09],
-    zoom: 13
+import leafletFullscreen from 'leaflet-fullscreen';
+
+let satellite = leaflet.icon({
+    iconUrl: 'images/satellite.png',
+    iconSize: [50,50],
 });
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-}).addTo(map);
+
+let map;
+let rendered = false; 
+let markers;
+
+let socket = new WebSocket("ws://localhost:5000");
+
+socket.onmessage = event => {
+  let data = JSON.parse(event.data);
+
+  if (!rendered) {
+    map = leaflet.map('map', {
+      fullscreenControl: true,
+      center: [data.lat, data.lon],
+      zoom: 4,
+      scrollWheelZoom: false
+    });
+
+    markers = leaflet.layerGroup().addTo(map);
+    
+    leaflet.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19,
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    }).addTo(map);
+
+    rendered = true;
+  }
+  markers.clearLayers();
+  leaflet.marker([data.lat, data.lon], {
+    icon: satellite
+  }).addTo(markers);
+};
+
+socket.onerror = error => {
+  console.log(`${error.message}`);
+};
