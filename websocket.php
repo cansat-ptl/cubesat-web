@@ -291,7 +291,7 @@ if (!function_exists('http_parse_headers')) {
 				}
 				sleep(1);
 				if ($curr['handshake']) {
-					$message = ["lat" => rand(-90,90), "lon" => rand(-180, 180)];
+					$message = ["lat" => rand(-90,90), "lng" => rand(-180, 180)];
 					$message = json_encode($message);
 					socket_write($curr["socket"], encode($message, "text"));
 				}
