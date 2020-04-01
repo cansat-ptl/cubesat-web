@@ -249,6 +249,11 @@ body {
   .main__text > a {
     font-size: 3vh;
   }
+  .nav > a {
+    float: none;
+    margin: 0;
+    padding-top:20px;
+  }
 }
 @media screen and (max-width: 500px) {
   .main__text > h1 {
