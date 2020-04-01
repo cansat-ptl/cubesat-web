@@ -70,9 +70,12 @@ gulp.task("clean", () => {
   return del(["dist/css", "dist/js"], { force: true });
 });
 
+gulp.task("assets", gulp.series("fa_icons", "leaflet_img", "leaflet_fullscreen"));
+gulp.task("modifiable", gulp.series("sass", "webpack", "copy_js", "img", "html", "minimize", "clean"));
+
 gulp.task(
   "default",
-  gulp.series("sass", "webpack", "copy_js", "fa_icons", "leaflet_img", "leaflet_fullscreen", "img", "html", "minimize", "clean")
+  gulp.series("assets", "modifiable")
 );
 
 gulp.task("serve", async function() {
@@ -81,5 +84,5 @@ gulp.task("serve", async function() {
     port: 8080,
     livereload: true
   });
-  gulp.watch("./src/**/*", gulp.series("default"));
+  gulp.watch("./src/**/*", gulp.series("modifiable"));
 });
