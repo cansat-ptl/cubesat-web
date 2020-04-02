@@ -44,5 +44,5 @@ socket.onmessage = event => {
 };
 
 socket.onerror = error => {
-  console.log(`${error.message}`);
+  console.log(error);
 };

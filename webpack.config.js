@@ -2,7 +2,8 @@ module.exports = {
     cache: false,
     mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
     entry: {
-      map: './src/js/map.js'
+      map: './src/js/map.js',
+      docs: './src/js/docs.js'
     },
     output: {
         filename: '[name].js',

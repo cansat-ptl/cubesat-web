@@ -1,0 +1,119 @@
+<extends src="base.html">
+    <block name="main">
+        <div class="popup">
+            <div class="popup__container">
+                <h1 class="popup__title">Здарова</h1>
+                <p class="popup__text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+                <div class="popup__close">Закрыть</div> 
+            </div>
+        </div>
+        <div class="main">
+            <h1>Документация</h1>
+            <div class="aligner documents">    
+            </div>
+        </div>
+    </block>
+    <block name="css">
+        <style>
+        .popup__title{
+            word-wrap: break-word;
+            font-family: "Ubuntu", sans-serif;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+        .popup__close{
+            color: #fff;
+            font-size: 1.8vh;
+            font-family: 'Ubuntu', sans-serif;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px;
+            padding-left: 2vh;
+            padding-right: 2vh;
+            background: #a91606;
+            transition: 0.2s;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            bottom: -35px;
+        }
+        .popup__text{
+            word-wrap: break-word;
+            font-size: 2.2vh;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top: 20px;
+            color: #000;
+        }
+        .popup__close:hover{
+            cursor: pointer;
+            box-shadow: 1px 3px 10px -1px #000;
+        }
+        .popup {
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .popup__container {
+            border: solid 2px #a91606;
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            position: relative;
+            width: 600px;
+            max-width: 80%;
+            min-height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .main{
+            margin-top: 40px;
+        }
+        .main > .aligner > .clear{
+            height: 0 !important;
+            width: 0 !important;
+        }
+        .main > h1{
+            text-align:center;
+            font-size: 24px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        .documents{
+            text-align: center;
+        }
+        .documents__document{
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        .documents__document:hover{
+            cursor: pointer;
+        }
+        .documents__document div{
+            font-family: 'Ubuntu';
+            font-size: 1rem;
+            border-radius: 0 0 3px 3px;
+            padding: 1.25rem;
+            border: solid 1px #dfdfdf;
+        }
+        .documents__document > div > p{
+            max-width: 159px;
+            word-wrap: break-word;
+        }
+        </style>
+    </block>
+    <block name="js">
+        <script src="js/docs.js" inline></script>
+    </block>
+</extends>
