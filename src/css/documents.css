@@ -1,0 +1,313 @@
+body,html,p, h1,img{
+    margin: 0;
+    color: #000;
+    padding: 0;
+}
+iframe{
+    height: 44vh;
+}
+body{
+    background: #fff;
+}
+.clear{
+    clear:both;
+    float: none !important;
+}
+.aligner{
+    width: 1316px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.header{
+    margin-top: 20px;
+}
+.header > div > *{
+    float:left;
+}
+.header__title > h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+}
+.header__title > p{
+    font-family: 'Ubuntu', Arial;
+    font-size: 14px;
+}
+.header__contacts{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.header__contacts > div{
+    float:left;
+    margin-right: 50px;
+}
+.header__contacts > div > *{
+    float:left;
+}
+.header__contacts__logo{
+    border-radius: 50px;
+    padding: 10px;
+    border: solid 2px #ddd;
+    margin-top: 7px;
+}
+.header__contacts__logo > i{
+    width: 18px;
+    text-align:center;
+    color: #1c5d99;
+}
+.header__contacts__text{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.header__contacts__text > h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+}
+.header__contacts__text > p{
+    font-family: 'Ubuntu', sans-serif;
+    color: #999;
+    line-height: 14px;
+    margin-top: 5px;
+    font-size: 13px;
+}
+.header__contacts__text > a{
+    font-family: 'Ubuntu', sans-serif;
+    color: #999;
+    line-height: 14px;
+    margin-top: 5px;
+    font-size: 13px;
+    text-decoration: none !important;
+}
+.header__contacts__text > a:hover{
+    text-decoration: none !important;
+}
+.header__contacts__quote{
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 1px 3px 10px -2px;
+    transition: 0.5s;
+}
+.header__contacts__quote:hover{
+    background: #e4e4e4;
+}
+.fa-bars{
+    display: none;
+}
+.header__mobile__menu{
+    display: none;
+    
+}
+/* Nav */
+
+.nav{
+    max-width: 100%;
+    background: #000;
+    position:relative;
+    top: 25px;
+    left:0;
+}
+.nav > a{
+    display:block;
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+.nav > a:hover{
+    background: #1c5d99;
+}
+/* Main */
+.main{
+    margin-top: 40px;
+}
+.main > .aligner > .clear{
+    height: 0 !important;
+    width: 0 !important;
+}
+.main > h1{
+    text-align:center;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.documents{
+    text-align: center;
+}
+.documents__document{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.documents__document div{
+    font-family: 'Ubuntu';
+    font-size: 1rem;
+    border-radius: 0 0 3px 3px;
+    padding: 1.25rem;
+    border: solid 1px #dfdfdf;
+}
+.documents__document > div > p{
+    max-width: 159px;
+    word-wrap: break-word;
+}
+.location{
+    text-align:center;
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.footer{
+    margin-top: 100px;
+    background: #000;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    padding: 30px;
+}
+@media screen and (max-width: 1366px) {
+    .nav > a:hover{
+        background: #000;
+    }
+    .nav > a{
+        padding: 0;
+        margin-right: 25px;
+        margin-top: 20px;
+    }
+    .nav{
+        box-sizing: border-box;
+        padding: 20px;
+        padding-top: 0;
+        padding-left: 25px;
+    }
+}
+@media screen and (max-width: 1316px) {
+    .header__contacts{
+        margin-left: 2vw;
+    }
+    .aligner{
+        width: 95vw;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 1150px) {
+    .header__contacts{
+        display: none;
+    }
+    .main__text >a:hover{
+        box-shadow: none;
+    }
+    .fa-bars{
+        display: block;
+        float: right !important;
+        font-size: 36px;
+        line-height: 60px;
+    }
+    .fa-bars:hover{
+        cursor:pointer;
+    }
+    .header__aligner{
+        width: 90vw !important;
+    }
+    .header__mobile__menu{
+        display: block;
+        float: none !important;
+        overflow: hidden;
+        height: 0;
+        transition: 0.5s ease-in-out;
+        padding: 10px;
+    }
+    
+    .header__mobile__menu > div{
+        margin-top: 10px;
+    }
+    .header__mobile__menu > div > *{
+        float:left;
+    }
+    .header__mobile__menu .header__contacts__text{
+        margin-top: 10px;
+    }
+    .header__mobile__menu .header__contacts__text a {
+        text-decoration: underline !important;
+    }
+}
+/* Main fix for moblie and small tablets */
+@media screen and (max-width: 1280px) {
+    .main > .aligner{
+        width: 600px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .main > .aligner{
+        width: 750px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .main__text{
+        border: none !important;    
+        padding: 0 !important;
+    }
+    .main__text >a{
+        padding: 1.5vh;
+        padding-left: 2.5vh;
+        padding-right: 2.5vh;
+    }
+}
+/* FUCK IT */
+@media screen and (max-width: 600px) {
+    .main__text{
+        width: 100% !important;
+    }
+    .main__text > h1{
+        font-size: 6vh !important;
+    }
+    .main__text > p{
+        font-size: 4vh;
+    }
+    .main__text >a{
+        font-size: 3vh;
+    }
+}
+@media screen and (max-width: 500px) {
+    .main__text > h1{
+        font-size: 4vh !important;
+    }
+    .main__text > p{
+        font-size: 3vh;
+    }
+    .main__text >a{
+        font-size: 2vh;
+    }
+}
+@media screen and (max-height: 500px) {
+    .main__text{
+        width: 100% !important;
+        border: none !important;    
+        padding: 0 !important;
+        
+    }
+    .main__text > h1{
+        font-size: 5vh !important;
+    }
+    .main__text > p{
+        font-size: 4vh;
+    }
+    .main__text >a{
+        font-size: 3vh;
+    }
+}
