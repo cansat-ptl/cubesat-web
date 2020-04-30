@@ -4,7 +4,6 @@ inline = require("gulp-inline-source");
 sass = require("gulp-sass");
 del = require("del");
 htmlmin = require("gulp-htmlmin");
-connect = require("gulp-connect");
 webpack = require('webpack');
 webpackStream = require("webpack-stream");
 webpack_conf = require('./webpack.config.js');
@@ -77,12 +76,4 @@ gulp.task(
   "default",
   gulp.series("assets", "modifiable")
 );
-
-gulp.task("serve", async function() {
-  connect.server({
-    root: "./dist",
-    port: 8080,
-    livereload: true
-  });
-  gulp.watch("./src/**/*", gulp.series("modifiable"));
-});
+gulp.task('watch', async () => gulp.watch("./src/**/*", gulp.series("modifiable")));

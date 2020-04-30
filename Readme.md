@@ -1,10 +1,11 @@
 ## First things first
 - `npm i` install all the dependencies
 
-## Running project:
-- `npm run serve` to start live server
+## Frontend (website):
 - `npm run build` to build for testing 
+- `npm run watch` build + watch for changes
 - `npm run production` to build for production
 
-## Docker
-Makefile is included to automate build of nginx docker container
+## Running project using docker
+- `docker-compose up` to get backend and containers up and running
+- `docker-compose up -d` if you want it in background

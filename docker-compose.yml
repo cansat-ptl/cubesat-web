@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    nginx:
+        image: 'artshellorok/nginx'
+        ports:
+            - '80:80'
+        volumes: 
+            - './dist:/usr/share/nginx/html'
+            - './nginx_config:/etc/nginx'
+        links:
+            - redis
+    redis:
+        image: 'artshellorok/redis'
+        restart: always

@@ -5,7 +5,7 @@
   "main": "./src/pages/index.html",
   "scripts": {
     "build": "gulp",
-    "serve": "gulp && gulp serve",
+    "watch": "gulp && gulp watch",
     "production": "env NODE_ENV=production npm run build"
   },
   "repository": {
@@ -23,7 +23,6 @@
     "@babel/preset-env": "^7.9.0",
     "@fortawesome/fontawesome-free": "^5.13.0",
     "gulp": "^4.0.2",
-    "gulp-connect": "^5.7.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-inline-source": "^4.0.0",
     "gulp-sass": "^4.0.2",
