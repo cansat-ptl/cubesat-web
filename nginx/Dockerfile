@@ -1,6 +1,3 @@
-FROM nginx
-
-CMD ["nginx"]
+FROM nginx:alpine
 
 EXPOSE 80
-

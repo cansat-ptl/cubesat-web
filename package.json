@@ -30,6 +30,7 @@
     "leaflet-fullscreen": "^1.0.2",
     "posthtml-extend": "^0.3.0",
     "posthtml-include": "^1.4.0",
+    "redis": "^3.0.2",
     "uglify-js": "^3.8.0",
     "webpack-stream": "^5.2.1"
   },
