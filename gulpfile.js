@@ -48,7 +48,11 @@ gulp.task("leaflet_fullscreen", () => {
 
 gulp.task("img", () => {
   return gulp.src("src/images/*").pipe(gulp.dest("dist/images"));
-});
+})
+
+gulp.task("docs", () => {
+  return gulp.src("src/docs/*").pipe(gulp.dest("dist/docs"));
+})
 
 gulp.task("html", () => {
   return gulp
@@ -70,7 +74,7 @@ gulp.task("clean", () => {
 });
 
 gulp.task("assets", gulp.series("fa_icons", "leaflet_img", "leaflet_fullscreen"));
-gulp.task("modifiable", gulp.series("sass", "webpack", "copy_js", "img", "html", "minimize", "clean"));
+gulp.task("modifiable", gulp.series("sass", "webpack", "copy_js", "img", "docs", "html", "minimize", "clean"));
 
 gulp.task(
   "default",
