@@ -243,30 +243,10 @@ body {
   .main__text {
     width: 100% !important;
   }
-  .main__text > h1 {
-    font-size: 6vh !important;
-  }
-  .main__text > p {
-    font-size: 4vh;
-  }
-  .main__text > a {
-    font-size: 3vh;
-  }
   .nav > a {
     float: none;
     margin: 0;
     padding-top:20px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .main__text > h1 {
-    font-size: 4vh !important;
-  }
-  .main__text > p {
-    font-size: 3vh;
-  }
-  .main__text > a {
-    font-size: 2vh;
   }
 }
 @media screen and (max-height: 500px) {
@@ -275,13 +255,12 @@ body {
     border: none !important;
     padding: 0 !important;
   }
-  .main__text > h1 {
-    font-size: 5vh !important;
+}
+@media screen and (max-height: 850px) {
+  .nav > a {
+    padding-top: 20px;
   }
-  .main__text > p {
-    font-size: 4vh;
-  }
-  .main__text > a {
-    font-size: 3vh;
+  .nav {
+    padding-left: 20px;
   }
 }

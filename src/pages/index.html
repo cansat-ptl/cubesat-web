@@ -68,6 +68,50 @@
         .main__text >a:hover{
             box-shadow: 1px 3px 10px -1px #000;
         }
+        @media screen and (max-height: 750px) {
+            .main__text > h1 {
+                font-size: 38px;
+            }
+            .main__text > p {
+                font-size: 20px;
+            }
+            .main__text > a {
+                font-size: 15px;
+            }
+        }
+        @media screen and (max-height: 900px) and (min-height: 750px) {
+            .main__text > h1 {
+                font-size: 5vh;
+            }
+            .main__text > p {
+                font-size: 2.2vh;
+            }
+            .main__text > a {
+                font-size: 1.8vh;
+            }
+        }
+        @media screen and (max-height: 1024px) and (min-height: 900px) {
+            .main__text > h1 {
+                font-size: 3.5vh;
+            }
+            .main__text > p {
+                font-size: 2vh;
+            }
+            .main__text > a {
+                font-size: 1.7vh;
+            }
+        }
+        @media screen and (min-height: 1100px) {
+            .main__text > h1 {
+                font-size: 3vh;
+            }
+            .main__text > p {
+                font-size: 1.8vh;
+            }
+            .main__text > a {
+                font-size: 1.5vh;
+            }
+        }
         </style>
     </block>
     <block name="js">

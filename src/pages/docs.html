@@ -23,7 +23,7 @@
         }
         .popup__close{
             color: #fff;
-            font-size: 1.8vh;
+            font-size: 16px;
             font-family: 'Ubuntu', sans-serif;
             text-decoration: none;
             font-weight: 500;
@@ -39,7 +39,7 @@
         }
         .popup__text{
             word-wrap: break-word;
-            font-size: 2.1vh;
+            font-size: 20px;
             font-family: 'Ubuntu', sans-serif;
             margin-top: 20px;
             color: #000;
@@ -113,6 +113,23 @@
             max-width: 159px;
             word-wrap: break-word;
         }
+        @media screen and (max-height: 813px) {
+            .popup__title{
+                font-size: 22px;
+            }
+            .popup__close{
+                font-size: 15px;
+            }
+            .popup__text{
+                font-size: 17px;
+            }
+        }
+        @media screen and (max-height: 600px) {
+            .popup__text{
+                font-size: 15px;
+            }
+        }
+        
         </style>
     </block>
     <block name="js">
