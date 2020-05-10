@@ -243,30 +243,16 @@ body {
   .main__text {
     width: 100% !important;
   }
-  .main__text > h1 {
-    font-size: 6vh !important;
-  }
-  .main__text > p {
-    font-size: 4vh;
-  }
-  .main__text > a {
-    font-size: 3vh;
+  .nav{
+    padding-top: 20px;
+    padding-bottom: 0;
   }
   .nav > a {
+    display: inline-block;
+    width: 100%;
     float: none;
     margin: 0;
-    padding-top:20px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .main__text > h1 {
-    font-size: 4vh !important;
-  }
-  .main__text > p {
-    font-size: 3vh;
-  }
-  .main__text > a {
-    font-size: 2vh;
+    margin-bottom:20px;
   }
 }
 @media screen and (max-height: 500px) {
@@ -274,14 +260,5 @@ body {
     width: 100% !important;
     border: none !important;
     padding: 0 !important;
-  }
-  .main__text > h1 {
-    font-size: 5vh !important;
-  }
-  .main__text > p {
-    font-size: 4vh;
-  }
-  .main__text > a {
-    font-size: 3vh;
   }
 }
