@@ -70,7 +70,7 @@ gulp.task("minimize", () => {
 });
 
 gulp.task("clean", () => {
-  return del(["dist/css", "dist/js"], { force: true });
+  return del(["dist/css", "dist/js/docs.js", "dist/js/widgets.js"], { force: true });
 });
 
 gulp.task("assets", gulp.series("fa_icons", "leaflet_img", "leaflet_fullscreen"));
