@@ -13,6 +13,29 @@
                 </div>
             </div>
         </div>
+        <div class="aligner sponsors">
+            <h1>
+                Спонсоры
+            </h1>
+            <div class="sponsors__list">
+                <a href="https://tpykt.ru">
+                    <img src="/images/technopark.jpg">
+                </a>
+                <a href="http://lensky-kray.ru">
+                    <img src="/images/man.jpg">
+                </a>
+                <a href="http://kvantorium.ru/">
+                    <img src="/images/kvantorium.jpg">
+                </a>
+                <a href="https://ikfia.ysn.ru/">
+                    <img src="/images/ikia.jpg">
+                </a>
+                <a href="http://ftl.yaguo.ru/">
+                    <img src="/images/ptl.jpg">
+                </a>
+                <div class="clear"></div>
+            </div>
+        </div>
     </block>
     <block name="css">
         <style>
@@ -112,16 +135,39 @@
                 font-size: 1.5vh;
             }
         }
+        /* Sponsors */
+        .sponsors > h1{
+            text-align:center;
+            font-size: 24px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .sponsors__list{
+            text-align: center;
+        }
+        .sponsors__list img{
+            width: 200px;
+        }
+        .sponsors__list > a{
+            display:inline-block;
+            vertical-align: middle;
+            width: 200px;
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-bottom: 20px;
+        }
         </style>
     </block>
     <block name="js">
         <script>
-            var maxlocation = 1280 / 1920 * window.innerWidth;
+            var maxlocation = 1080 / 1920 * window.innerWidth;
             function parallax() {
                 var $slider = document.querySelector(".main");
                 var yPos = window.pageYOffset / 2;
                 yPos = -yPos;
                 if(yPos * -1 < maxlocation - (window.innerHeight * 0.75 + 15)){
+                    console.log(maxlocation - (window.innerHeight * 0.75 + 15));
                     var coords = "0% "+ yPos + "px";
                     $slider.style.backgroundPosition = coords;
                 }

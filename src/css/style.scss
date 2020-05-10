@@ -243,10 +243,16 @@ body {
   .main__text {
     width: 100% !important;
   }
+  .nav{
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
   .nav > a {
+    display: inline-block;
+    width: 100%;
     float: none;
     margin: 0;
-    padding-top:20px;
+    margin-bottom:20px;
   }
 }
 @media screen and (max-height: 500px) {
@@ -254,13 +260,5 @@ body {
     width: 100% !important;
     border: none !important;
     padding: 0 !important;
-  }
-}
-@media screen and (max-height: 850px) {
-  .nav > a {
-    padding-top: 20px;
-  }
-  .nav {
-    padding-left: 20px;
   }
 }
