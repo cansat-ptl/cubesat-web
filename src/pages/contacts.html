@@ -5,15 +5,53 @@
             <div class="contacts aligner">
                 <div>
                     <div> 
-                        <img src="https://botlist.imgix.net/1301/c/pewdiepie-medium.jpg?auto=compress" class="contacts__photo">
+                        <img src="/images/petrovich.jpg" class="contacts__photo">
                     </div>
                     <div class="contacts__contact">
-                        <h2>Какой-то странный мужик, ютубер</h2>
+                        <h2>Андрей Петров, Программист (борт)</h2>
                         <p>
-                            Телефон: <a href="#">eshkere3</a>
+                            VK: <a href="https://vk.com/nedopustimiy_format_aaaa">vk.com/nedopustimiy_format_aaaa</a>
                         </p>
                         <p>
-                            E-mail: <a href="#">sample@example.com</a>
+                            E-mail: <a href="mailto:thepetrovich@protonmail.ch">thepetrovich@protonmail.ch</a>
+                        </p>
+                        <p>
+                            GitHub: <a href="https://github.com/thepetrovich">github.com/thepetrovich</a>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <hr>
+                <div>
+                    <div> 
+                        <img src="/images/antonov_anatoly.jpg" class="contacts__photo">
+                    </div>
+                    <div class="contacts__contact">
+                        <h2>Анатолий Антонов, Программист (наземная станция)</h2>
+                        <p>
+                             VK: <a href="https://vk.com/id416772499">vk.com/id416772499</a>
+                        </p>
+                        <p>
+                            E-mail: <a href="mailto:awendo@mail.ru">awendo@mail.ru</a>
+                        </p>
+                        <p>
+                            GitHub: <a href="https://github.com/champi2061">github.com/champi2061</a>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <hr>
+                <div>
+                    <div> 
+                        <img src="/images/illarionov_timur.jpg" class="contacts__photo">
+                    </div>
+                    <div class="contacts__contact">
+                        <h2>Тимур Илларионов, Инженер</h2>
+                        <p>
+                            VK: <a href="https://vk.com/tamikbr0">vk.com/tamikbr0</a>
+                        </p>
+                        <p>
+                            GitHub <a href="https://github.com/tamikbro">github.com/tamikbro</a>
                         </p>
                     </div>
                     <div class="clear"></div>
@@ -24,12 +62,12 @@
                         <img src="https://botlist.imgix.net/1301/c/pewdiepie-medium.jpg?auto=compress" class="contacts__photo">
                     </div>
                     <div class="contacts__contact">
-                        <h2>Какой-то странный мужик, ютубер</h2>
+                        <h2>Артём Филиппов, Программист (веб)</h2>
                         <p>
-                            Телефон: <a href="#">eshkere3</a>
+                            E-mail: <a href="mailto:artshellorok@gmail.com">artshellorok@gmail.com</a>
                         </p>
                         <p>
-                            E-mail: <a href="#">sample@example.com</a>
+                            GitHub <a href="https://github.com/artshellorok">github.com/artshellorok</a>
                         </p>
                     </div>
                     <div class="clear"></div>
@@ -37,15 +75,25 @@
                 <hr>
                 <div>
                     <div> 
-                        <img src="https://botlist.imgix.net/1301/c/pewdiepie-medium.jpg?auto=compress" class="contacts__photo">
+                        <img src="https://cdn.costumewall.com/wp-content/uploads/2019/06/tf2-engineer.jpg" class="contacts__photo">
                     </div>
                     <div class="contacts__contact">
-                        <h2>Какой-то странный мужик, ютубер</h2>
+                        <h2>Егор Григорьев, Инженер</h2>
                         <p>
-                            Телефон: <a href="#">eshkere3</a>
+                            VK: <a href="https://vk.com/bizzhop">vk.com/bizzhop</a>
                         </p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <hr>
+                <div>
+                    <div> 
+                        <img src="https://cdn.costumewall.com/wp-content/uploads/2019/06/tf2-engineer.jpg" class="contacts__photo">
+                    </div>
+                    <div class="contacts__contact">
+                        <h2>Айсен Афанасьев, Инженер</h2>
                         <p>
-                            E-mail: <a href="#">sample@example.com</a>
+                            VK: <a href="https://vk.com/aisenaf">vk.com/aisenaf</a>
                         </p>
                     </div>
                     <div class="clear"></div>
@@ -80,8 +128,13 @@
         .contacts__contact{
             margin-left: 20px;
             width: 780px;
-            max-width: 100%;
+            max-width: 95%;
             margin-top: 5px;
+        }
+        @media screen and (max-height: 780px) {
+            .contacts__contact{
+                margin-left: 5%;
+            }
         }
         .contacts__contact > h2{
             font-family: 'Ubuntu';
@@ -92,6 +145,7 @@
             font-family: 'Ubuntu';
             font-size: 16px;
             font-weight: bold;
+            word-wrap: break-word;
             margin-top: 10px !important;
         }
         .contacts hr{
