@@ -26,7 +26,7 @@ let map = leaflet.map('map', {
 let markers = leaflet.layerGroup().addTo(map);
 let rendered = false; 
 
-let socket = new WebSocket("ws://78.47.18.15:5000");
+let socket = new WebSocket("ws://94.130.56.130:5000");
 socket.onopen = e => {
   socket.send(JSON.stringify(
     {
