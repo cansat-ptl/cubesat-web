@@ -95,7 +95,9 @@ function sendStoredData(conn, required) {
 wss.on('connection', ws => {
   ws.on('message', msg => {
     try {
+      console.log(msg);
       msg = JSON.parse(msg);
+      console.log(msg);
       if (!ws.authenticated) {
         if (msg.token == process.env.TOKEN) {
           ws.authenticated = true;

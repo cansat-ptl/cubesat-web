@@ -1,21 +1,23 @@
 version: '3.3'
 services:
     nginx:
-        image: 'artshellorok/nginx'
+        build: 'nginx'
         restart: always
         ports:
             - '80:80'
+            - '443:443'
         volumes: 
-            - './dist:/usr/share/nginx/html'
+            - './keys:/etc/ssl/private'
             - './nginx/config:/etc/nginx'
+            - './dist:/usr/share/nginx/html'
+        links:
+          - websocket
     redis:
         image: 'artshellorok/redis'
         restart: always
     websocket:
         image: 'artshellorok/ws'
         restart: always
-        ports:
-            - '5000:5000'
         volumes:
             - './websocket/src:/srv/ws'
         links:
