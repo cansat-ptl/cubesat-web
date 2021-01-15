@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 posthtml = require("gulp-posthtml");
-inline = require("gulp-inline-source-html");
+inline = require("gulp-inline-source");
 sass = require("gulp-sass");
 del = require("del");
 htmlmin = require("gulp-htmlmin");
@@ -58,7 +58,9 @@ gulp.task("docs", () => {
 gulp.task("html", () => {
   let path;
   let plugins = [
-    require('posthtml-custom-elements')({root: path})
+    require('posthtml-include')({root: __dirname + '/src'}),
+    require('posthtml-extend')({root: __dirname + '/src'}),
+    require('posthtml-custom-elements')({root: __dirname + '/src'})
   ]
   let options = {
     directives: [
