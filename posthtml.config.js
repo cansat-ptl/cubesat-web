@@ -6,5 +6,5 @@ module.exports = {
     'posthtml-extend': {
       root: __dirname + '/src',
     }
-  }
+  },
 }

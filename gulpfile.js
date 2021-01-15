@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 posthtml = require("gulp-posthtml");
-inline = require("gulp-inline-source");
+inline = require("gulp-inline-source-html");
 sass = require("gulp-sass");
 del = require("del");
 htmlmin = require("gulp-htmlmin");
@@ -10,6 +10,7 @@ webpack_conf = require('./webpack.config.js');
 
 let minify_config = {
   collapseWhitespace: true,
+  ignoreCustomFragments: [ /<%[\s\S]*?%>/, /<\?[=|php]?[\s\S]*?\?>/ ],
   minifyJS: true,
   minifyCSS: true
 };
@@ -55,15 +56,24 @@ gulp.task("docs", () => {
 })
 
 gulp.task("html", () => {
+  let path;
+  let plugins = [
+    require('posthtml-custom-elements')({root: path})
+  ]
+  let options = {
+    directives: [
+      { name: '?php', start: '<', end: '>' },
+    ],
+  };
   return gulp
-    .src("src/pages/*.html")
-    .pipe(posthtml())
+    .src("src/pages/*.{html,php}")
+    .pipe(posthtml(plugins, options))
     .pipe(gulp.dest("dist"));
 });
 
 gulp.task("minimize", () => {
   return gulp
-    .src("dist/*.html")
+    .src("dist/*.{html,php}")
     .pipe(inline())
     .pipe(htmlmin(minify_config))
     .pipe(gulp.dest("dist"));
