@@ -10,10 +10,20 @@ services:
             - './keys:/etc/ssl/private'
             - './nginx/config:/etc/nginx'
             - './dist:/usr/share/nginx/html'
+            - './website-docs:/usr/share/nginx/website-docs'
         links:
           - websocket
+          - php-fpm
     redis:
         image: 'artshellorok/redis'
+        restart: always
+    php-fpm:
+        image: 'artshellorok/php-fpm'
+        volumes:
+            - './php/php.ini:/usr/local/etc/php/php.ini'
+            - './php/conf.d:/usr/local/etc/php/conf.d'
+            - './dist:/var/www/html'
+            - './website-docs:/var/www/html/website-docs'
         restart: always
     websocket:
         image: 'artshellorok/ws'

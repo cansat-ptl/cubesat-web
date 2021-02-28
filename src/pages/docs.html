@@ -1,138 +1,184 @@
 <extends src="base.html">
     <block name="main">
-        <div class="popup">
-            <div class="popup__container">
-                <h1 class="popup__title"></h1>
-                <p class="popup__text"></p>
-                <div class="popup__close">Закрыть</div> 
-            </div>
-        </div>
-        <div class="main">
+        <div class="main aligner">
             <h1>Документация</h1>
-            <div class="aligner documents">    
-            </div>
+            <div class="docs">
+                <div class="docs__categories">
+                    <h1>
+                        Категория документа:
+                    </h1>
+                    <div>
+                        <div class="docs__categories__element">
+                            <h2><span>+</span>Радио</h2>
+                            <ul>
+                                <li>
+                                    Передатчик1
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div>
+                        <div class="docs__categories__element">
+                            <h2><span>+</span>Категория2</h2>
+                            <ul>
+                                <li>
+                                    Передатчик2
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div>
+                        <div class="docs__categories__element">
+                            <h2><span>+</span>Категория2</h2>
+                            <ul>
+                                <li>
+                                    Передатчик2
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div>
+                        <div class="docs__categories__element">
+                            <h2><span>+</span>Категория2</h2>
+                            <ul>
+                                <li>
+                                    Передатчик2
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+                <div class="docs__search">
+                    <div class="docs__search__bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Поиск" id="search">
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div> 
         </div>
     </block>
     <block name="css">
         <style>
-        .popup__title{
-            word-wrap: break-word;
-            font-family: "Ubuntu", sans-serif;
-            margin-bottom: 30px;
-            font-size: 26px;
-        }
-        .popup__close{
-            color: #fff;
-            font-size: 16px;
-            font-family: 'Ubuntu', sans-serif;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 10px;
-            padding-left: 2vh;
-            padding-right: 2vh;
-            background: #1c5d99;
-            transition: 0.2s;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            bottom: -35px;
-        }
-        .popup__text{
-            word-wrap: break-word;
-            font-size: 20px;
-            font-family: 'Ubuntu', sans-serif;
-            margin-top: 20px;
-            color: #000;
-        }
-        .popup__text a{
-            text-decoration: none;
-        }
-        .popup__close:hover{
-            cursor: pointer;
-            box-shadow: 1px 3px 10px -1px #000;
-        }
-        .popup {
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.2s;
-            position: fixed;
-            z-index: 2000;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-        .popup__container {
-            border-bottom: solid 2px #1c5d99;
-            text-align: center;
-            padding: 30px;
-            background: #fff;
-            position: relative;
-            width: 600px;
-            max-width: 80%;
-            min-height: 300px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .main{
+        .main {
             margin-top: 40px;
         }
-        .main > .aligner > .clear{
-            height: 0 !important;
-            width: 0 !important;
-        }
-        .main > h1{
-            text-align:center;
+        .main > h1 {
+            margin-top: 30px;
+            text-align: center;
             font-size: 24px;
             font-family: 'Ubuntu', sans-serif;
+        }
+        .docs {
             margin-top: 30px;
-            margin-bottom: 50px;
         }
-        .documents{
-            text-align: center;
+        /* Categories start */
+        .docs__categories {
+            float: left;
+            width: 28.5%;
+            padding-left: 1.5%;
         }
-        .documents__document{
-            display: inline-block;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-bottom: 20px;
-        }
-        .documents__document:hover{
-            cursor: pointer;
-        }
-        .documents__document div{
-            font-family: 'Ubuntu';
-            font-size: 1rem;
-            border-radius: 0 0 3px 3px;
-            padding: 1.25rem;
-            border: solid 1px #dfdfdf;
-        }
-        .documents__document > div > p{
-            max-width: 159px;
-            word-wrap: break-word;
-        }
-        @media screen and (max-height: 813px) {
-            .popup__title{
-                font-size: 22px;
-            }
-            .popup__close{
-                font-size: 15px;
-            }
-            .popup__text{
-                font-size: 17px;
-            }
-        }
-        @media screen and (max-height: 600px) {
-            .popup__text{
-                font-size: 15px;
-            }
+        .docs__categories > h1{
+            font-size: 22px;
+            font-family: 'Ubuntu', sans-serif; 
+            font-weight: 200;
+            margin-bottom: 30px;
         }
         
+        .docs__categories > div {
+            margin-left: 15px;
+        }
+        .docs__categories__element span{
+            color: #1c5d99;
+            margin-right: 7px;
+        }
+        .docs__categories__element > h2{
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+        }
+        .docs__categories__element > h2:hover{
+            color: #1c5d99;
+            cursor: pointer;
+        }
+        .docs__categories__element {
+            margin-bottom: 10px;
+        }
+        .docs__categories__element > ul {
+            padding: 0 !important;
+            margin: 0 !important;
+            padding-left: 40px !important;
+            height: 0;
+            overflow: hidden;
+            transition: 0.2s;
+        }
+        .docs__categories__element li {
+            margin-top: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+        }
+        .docs__categories__element ::marker {
+            background: #1c5d99 !important;
+            color: #1c5d99 !important;
+        }
+        .docs__categories__element li:hover {
+            color: #1c5d99;
+            cursor: pointer;
+        }
+        /* Categories end */
+
+        /* Search start */
+        .docs__search {
+            width: 70%;
+            float: left;
+        }
+        .docs__search__bar {
+            width: 500px;
+            border-radius: 15px;
+            padding: 15px;
+            border: 1px solid #dfe1e5;
+        }
+        .docs__search__bar:hover {
+            box-shadow: 0 1px 6px rgb(32 33 36 / 28%) !important;
+        }
+        .docs__search__bar i{
+            color: #757575;
+            margin-right: 5px;
+        }
+        .docs__search__bar input{
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            border: none;
+        }
+        .docs__search__bar input:focus {
+            outline: none;
+        }
+        /* Search end */
         </style>
     </block>
     <block name="js">
-        <script src="js/docs.js" inline></script>
+        <script>
+            let docs = document.querySelectorAll(".docs__categories__element");
+            console.log(docs);
+            for (let doc of docs) {
+                doc.inactive = true;
+                
+                doc.querySelector('h2').addEventListener('click', function() {
+                    doc.querySelector('ul').style.height = (doc.inactive ? doc.querySelector('ul').scrollHeight + 'px' : 0);
+                    doc.querySelector('span').innerText = (doc.inactive ? '-' : '+');
+                    doc.inactive = !doc.inactive;
+                }.bind(doc));
+            }
+            let search = document.getElementById("search");
+            let search_bar = document.querySelector(".docs__search__bar");
+            
+            search.onfocus = () => {
+                search_bar.style.boxShadow = "0 1px 6px rgb(32 33 36 / 28%)";
+            }
+            search.onblur = () => {
+                search_bar.style.boxShadow = "none";
+            }
+            
+        </script>
     </block>
 </extends>
