@@ -73,6 +73,10 @@ gulp.task("html", () => {
     .pipe(gulp.dest("dist"));
 });
 
+gulp.task("api", () => {
+  return gulp.src("src/api/*").pipe(gulp.dest("dist/api"));
+});
+
 gulp.task("minimize", () => {
   return gulp
     .src("dist/*.{html,php}")
@@ -86,7 +90,7 @@ gulp.task("clean", () => {
 });
 
 gulp.task("assets", gulp.series("fa_icons", "leaflet_img", "leaflet_fullscreen"));
-gulp.task("modifiable", gulp.series("sass", "webpack", "copy_js", "img", "docs", "html", "minimize", "clean"));
+gulp.task("modifiable", gulp.series("sass", "webpack", "copy_js", "img", "docs", "html", "minimize", "api", "clean"));
 
 gulp.task(
   "default",
