@@ -3,7 +3,8 @@ module.exports = {
     mode: process.env.NODE_ENV == 'production' ? 'production' : 'development',
     entry: {
       map: './src/js/map.js',
-      docs: './src/js/docs.js'
+      docs: './src/js/docs.js',
+      devices: './src/js/devices.js'
     },
     output: {
         filename: '[name].js',

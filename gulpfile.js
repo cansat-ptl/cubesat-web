@@ -74,7 +74,7 @@ gulp.task("html", () => {
 });
 
 gulp.task("api", () => {
-  return gulp.src("src/api/*").pipe(gulp.dest("dist/api"));
+  return gulp.src("src/api/**/*").pipe(gulp.dest("dist/api"));
 });
 
 gulp.task("minimize", () => {
@@ -86,11 +86,11 @@ gulp.task("minimize", () => {
 });
 
 gulp.task("clean", () => {
-  return del(["dist/css", "dist/js/docs.js", "dist/js/widgets.js"], { force: true });
+  return del(["dist/css", "dist/js/devices.js", "dist/js/widgets.js", "dist/js/docs.js"], { force: true });
 });
 
 gulp.task("assets", gulp.series("fa_icons", "leaflet_img", "leaflet_fullscreen"));
-gulp.task("modifiable", gulp.series("sass", "webpack", "copy_js", "img", "docs", "html", "minimize", "api", "clean"));
+gulp.task("modifiable", gulp.series("api", "sass", "webpack", "copy_js", "img", "docs", "html", "minimize", "clean"));
 
 gulp.task(
   "default",
